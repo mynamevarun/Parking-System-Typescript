@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>Metacube Parking System</title>
+	<link rel='stylesheet' href='./UI_UX_CSS.css'/>
+	<link rel="icon" href="./fevicon.png" type="image/gif" sizes="16x16">
+</head>
+
+<body>
+		<!-- Header Starts Here -->
+		<header>
+			<!--Nav Bar Starts From Here-->
+			<nav class='nav-bar'>
+				<div class='row'>
+					<span class='logo'><b>Parking System</b></span>
+					<ul class='nav-items'>
+						<li><a href="#addEmployee">Add Employee</a></li>
+						<li><a href="#addVehicle">Add Vehicle</a></li>
+						<li><a href="#giveFeedback">Give Feedback</a></li>
+						<li><a href="#pricing">Pricing</a></li>
+					</ul>
+				</div>
+			</nav>	
+			<!--Nav Bar Ends Here-->
+
+			<!-- Cover Image Starts -->	
+			<div class='cover-image'>
+				<img src="https://parkwheels.co.in/wp-content/uploads/2019/11/image-8.png" alt=''>
+			</div>
+			<!-- Cover Image End -->
+		</header>
+		<!-- Header Ends Here -->
+		<hr>
+		<!-- Add Employee Section Starts Here -->
+		<div class='container' id='addEmployee'>
+			<div class='expand-collapse dark' id='employeeHead'>
+				<h2 class='employee-detail'>Employee Details</h2>
+			</div>
+			<form class='form-container hide' id='employeeForm'>
+				<div class='hide' id='nameDiv'>
+					<label for='fullname'>Please Tell Us Your Good Name</label>
+					<input type="text" id='fullname' class='input-text' name="name-employee" required>
+				</div>
+
+				<div class='hide' id='genderDiv'>
+					<label class='name-specify' id='genderLabel'></label><br><br>
+					<label for='female'>Female</label>
+					<input type="radio" id='female' name="gender" value='female' >
+					<label for='male'>Male</label>
+					<input type="radio" id='male' name="gender" value='male' ><br><br>
+				</div>
+
+				<div class='hide' id='emailDiv'>
+					<label for='empEmail' id='emailLabel'>EmailId</label>
+					<input type="email" id='empEmail' class='input-email' name="emailId-employee" >
+				</div>
+
+				<div class='hide' id='passwordDiv'>
+					<label for='password' id='passwordLabel'>Password</label>
+					<input type="Password" id='password' class='input-password' name="password-employee"  minlength=6>
+				<!-- </div>
+
+				<div class='hide'> -->
+					<label for='confirmpassword'>Confirm Password</label>
+					<input type="Password" class='input-password' id='confirmpassword' name="confirm-password-employee"  minlength=6>
+				</div>
+
+				<div class='hide' id='mobileDiv'>
+					<label for='contactnumber' id='mobileLabel'>Mobile Number</label>
+					<input type="text" id='contactnumber' class='input-text' name="mobile-number" required minlength=10 maxlength=10 pattern="[789][0-9]{9}">
+				</div>
+		
+				<div class='hide' id='submitDiv'>
+					<input type="Submit" name="submit-Button-employee" id='addEmployeeSubmit' value='ADD'>
+				</div>
+				<p class='error-red ' id='error'></p>
+			</form>	
+			<p id='empIdGenerated' class='hide'></p>
+		</div>
+		<!-- Add Employee Section Ends Here -->	
+		<hr>
+		<!-- Add Vehicle Section Starts Here -->
+		<div class='container' id='addVehicle'>
+			<div class='expand-collapse dark' id='vehicleHead'>
+				<h2>Vehicle Details</h2>
+			</div>
+			<form class='form-container hide' id='addVehicleForm'>
+				<div class='hide' id='companyDiv'>
+					<label for='vehiclemake'>Please Specify Your Vehicle Company</label>
+					<input type="text" class='input-text' id='vehiclemake' name="Vehicle-make" required>
+					
+				</div>
+				
+				<div class='hide' id='modelDiv'>
+					<label for='vehiclemodel' id='modelLabel'>Enter Your Vehicle Model</label>
+					<input type="text" class='input-text' id='vehiclemodel' name="vehicle-model" required>
+					
+				</div>
+
+				<div class='hide' id='typeDiv'>
+					<label for='type-select'>Select Your Vehicle Type</label>
+						<select name='vehicle-type' class='input-text' id='type-select'>
+							<option>Cycle</option>
+							<option>Bike</option>
+							<option>Car</option>
+					</select>
+				</div>
+
+				<div class='hide' id='numberDiv'>
+					<label for='vehiclenumber'>What Is Your Vehicle Number</label>
+					<input type="text" class='input-text' id='vehiclenumber' name="vehicle-number" required minlength=10>
+					
+				</div>
+
+				<div class='hide' id='empIdDiv'>
+					<label for='empIdFill' id='empIdLabel'>Enter Your Employee Id</label>
+					<input type="text" class='input-text' id='empIdFill' name="employee-id" required minlength=6 maxlength=6>
+					
+				</div>
+				
+				<div class='hide' id='identificationDiv'>	
+					<label for=''>Give Some Identification Of Vehicle</label>
+						<textarea class='input-text'  id='identification' name="employee-identification" required maxlength=200></textarea> 
+					
+				</div>
+				
+				<div class='hide' id='vehicleSubmitDiv'>	
+					<input type="Submit" name="submit-button-vehicle" id='addVehicleSubmit'>
+				</div>
+			</form>
+			<P class='next-info'id='vehicleregistered'></P>
+			<p class='next-info'id='nextInfo'></p>
+		</div>
+		<!-- Add Vehicle Section Ends Here -->
+		<hr>
+		<!-- Give Feedback Section Starts Here -->
+		<div class='container' id='giveFeedback'>
+			<div class='expand-collapse dark' id='feedbackHead'>
+				<h2>Give Feedback</h2>
+			</div>
+			<form class='form-container hide' id='giveFeedbackForm'>
+
+				<div class=''>
+					<label for='feed-name' >Name </label><input id='feed-name' type="text" class='input-text' name="name-feedback" required>
+				</div>
+				
+				<div class=''>	
+					<label for='feed-email' >Email </label><input id='feed-email' class='input-email' type="email" name="email-feedback" required>
+				</div>
+
+				<div class=''>
+					<label for='feed-subject' >Subject </label><input id='feed-subject'class='input-text' type="text" name="subject-feedback" required>
+				</div>
+
+				<div class=''>
+					<label for='feed-message' >Message </label> <textarea class='input-text' id='feed-message' required maxlength=200 ></textarea>
+				</div>
+
+				<div class=''>
+					<input  type="Submit" name="submit-button-feedback" id='giveFeedbackSubmit'>
+				</div>
+			</form> 
+		</div>
+		<!-- Give Feedback Section Ends Here -->
+		<hr>
+		<!-- Pricing Section Starts Here -->
+		<div class='container' id='pricing'>
+			<div class='expand-collapse dark'i id='pricingHead'>
+				<h2>Pricing</h2>
+			</div>
+			
+			<div  class='container-align hide' id='mainPrice'>
+				<!-- These are currency change buttons -->
+				<div class='convert' id='usdWrap'>Convert Price in to USD($)  <span><button class='btn' id='usd'>USD</button></span></div>
+				<div class='convert'>Convert Price in to YEN <span><button class='btn' id='yen'>YEN</button><span></div>
+				<!-- <div class='convert'>Convert Price in to Rupees <span><button class='btn' id='inr'>INR</button><span></div> -->
+				
+				<!-- This is temporary container to handle the price plan -->
+				<div id='temp'></div>
+				
+				<!-- First Container -->
+				<div class='pricing-container' id='Cycle'>
+					<h3>CYCLE</h3>
+					<div class='info'>
+						<p class='curren' id='p1'>₹100</p>
+						<p class='month' id='p2'>/month</p>
+					</div>
+					<div class='price-info'>
+						<p class='plan-choose' id='p3'>₹5 Daily</p>
+						<p class='plan-choose' id='p4'>₹100 Monthly</p>
+						<p class='plan-choose' id='p5'>₹500 Yearly</p>
+					</div>
+					<button class='btn purchase' id='purchaseCycle'>Get Pass</button>
+				</div>
+
+				<!-- Second Container -->
+				<div class='pricing-container ' id='Bike'>
+					<h3>Bike</h3>
+					<div class='info'>  
+						<p class='curren' id='p6'>₹200</p>
+						<p class='month' id='p7'>/month</p>
+					</div>
+					<div class='price-info'>
+						<p class='plan-choose' id='p8'>₹10 Daily</p>
+						<p class='plan-choose' id='p9'>₹200 Monthly</p>
+						<p class='plan-choose' id='p10'>₹1000 Yearly</p>
+					</div>
+					<button class='btn purchase' id='purchaseBike'>Get Pass</button>
+				</div>
+
+				<!-- Third Container -->
+				<div class='pricing-container ' id='Car'>
+					<h3>Car</h3>
+					<div class='info'>
+						<p class='curren' id='p11'>₹500</p>
+						<p class='month' id='p12'>/month</p>
+					</div>
+					<div class='price-info'>	
+						<p class='plan-choose' id='p13'>₹20 Daily</p>
+						<p class='plan-choose' id='p14'>₹500 Monthly</p>
+						<p class='plan-choose' id='p15'>₹3500 Yearly</p>
+					</div>
+					<button class='btn purchase' id='purchaseCar'>Get Pass</button>
+				</div>
+			</div>
+		</div>
+		<!-- Pricing Section Ends Here -->
+		<div class='pass-generate hide'>
+		</div>
+		
+		<!-- This section generate a vehicle pass -->
+		<div class='hide' id='passWrapper'>
+
+			<div class='my-pass hide' id='myPass'>
+				<h3>Vehicle Pass</h3>
+				<p >Employee Name : <span id='nameP'></span></p>
+				<p >Employee Id : <span id='idP'></span></p>
+				<p >Vehicle Type : <span id='typeP'></span></p>
+				<p >Vehicle Company : <span id='companyP'></span></p>
+				<p >Vehicle Model : <span id='modelP'></span></p>
+				<p >Price : <span id='priceP'></span></p>
+
+			</div>
+
+		</div>	
+		<hr>
+
+		<p class='footer'>Copyright @ Arcade Garud Varun Kumar</p>
+
+
+		<!-- Script starts from here -->
+		<!-- <script type="text/javascript" src='./UI_UX_JS.js'></script> -->
+		<!-- <script src='./employee.js'></script>
+		<script src='./feedback.js'></script>
+		<script src='./vehicle.js'></script> -->
+		<script src='./parking.js'></script>
+		<script type="text/javascript">
+			System.import('./parking.js').then(function(play) { 
+      	 new play.Employee();
+      		// player.start(); 
+    })
+		</script>
+</body>
+</html>
